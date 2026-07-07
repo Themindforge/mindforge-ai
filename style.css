@@ -187,6 +187,11 @@ textarea {
   right: 0;
   z-index: 1000;
   height: var(--header-height);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(10, 10, 20, 0.55);
+  border-bottom: 1px solidrgba(255, 255, 255, 0.08);
   transition: background var(--transition), box-shadow var(--transition);
 }
 
