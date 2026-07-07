@@ -437,7 +437,11 @@
               </li>
             </ul>
           </div>
-          <form class="contact-form reveal" id="contactForm" novalidate>
+          <form class="contact-form reveal"
+      id="contactForm"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+      <input type="hidden" name="access_key" value="ea12bdca-75e9-41ca-88aa-db865d6645e8">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name</label>

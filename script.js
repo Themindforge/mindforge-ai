@@ -217,20 +217,15 @@
   });
 
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
 
     const isValid = Object.keys(validators).every((fieldId) => validateField(fieldId));
 
-    if (isValid) {
-      const successEl = document.getElementById('formSuccess');
-      successEl.hidden = false;
-      contactForm.reset();
-
-      setTimeout(() => {
-        successEl.hidden = true;
-      }, 5000);
+    if (!isValid) {
+        e.preventDefault();
+        return;
     }
-  });
+
+});
 
   /* ===== Smooth anchor offset for fixed header ===== */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -246,11 +241,3 @@
     });
   });
 })();
-// ===== Page Progress Bar =====
-window.addEventListener("scroll", () => {
-    const progress = document.querySelector(".page-progress");
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const percent = (scrollTop / docHeight) * 100;
-    progress.style.width = percent + "%";
-});
