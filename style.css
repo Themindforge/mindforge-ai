@@ -1334,3 +1334,15 @@ textarea {
     scroll-behavior: auto;
   }
 }
+/* ===== Page Progress Bar ===== */
+
+.page-progress{
+    position: fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:3px;
+    background:linear-gradient(90deg,#00d4ff,#7b61ff,#ff4ecd);
+    z-index:99999;
+    transition:width .15s linear;
+}
