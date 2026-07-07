@@ -1,31 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - MindForge AI</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact MindForge AI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="dark-bg">
+  <main class="page-wrapper contact-page">
+    <section class="hero hero-compact">
+      <div class="page-header">
+        <span class="eyebrow accent-text">Get in touch</span>
+        <h1 class="page-title">Contact MindForge AI</h1>
+        <p class="page-subtitle">Partner with AI strategy and automation experts for a smarter business future.</p>
+      </div>
+    </section>
 
-<body>
+    <section class="content-grid">
+      <div class="contact-panel glass-panel">
+        <div class="info-block">
+          <h2 class="section-title">Fast support</h2>
+          <p class="section-copy">Our team is ready to review your request and respond with next steps.</p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:contact.mindforge.ai@gmail.com" class="contact-value">contact.mindforge.ai@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">India</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Response Time</span>
+              <span class="contact-value">Within 24 Hours</span>
+            </div>
+          </div>
+          <a href="index.html" class="btn btn-secondary back-home">Back to Home</a>
+        </div>
+      </div>
 
-<h1>Contact MindForge AI</h1>
+      <div class="form-panel glass-panel">
+        <form class="contact-form">
+          <div class="field-group">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Enter your name" required class="input-field" />
+          </div>
 
-<p>We'd love to hear about your project.</p>
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required class="input-field" />
+          </div>
 
-<h3>Email</h3>
-<p>contact.mindforge.ai@gmail.com</p>
+          <div class="row-grid">
+            <div class="field-group">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 12345 67890" class="input-field" />
+            </div>
+            <div class="field-group">
+              <label for="company">Company Name</label>
+              <input id="company" name="company" type="text" placeholder="Your company" class="input-field" />
+            </div>
+          </div>
 
-<h3>Location</h3>
-<p>Remote Digital Agency</p>
-<p>Based in India</p>
-<p>Serving Clients Worldwide</p>
+          <div class="field-group">
+            <label for="service">Service</label>
+            <select id="service" name="service" class="select-field">
+              <option value="">Choose a service</option>
+              <option value="strategy">AI Strategy</option>
+              <option value="automation">Automation</option>
+              <option value="data">Data Intelligence</option>
+              <option value="custom">Custom Solutions</option>
+            </select>
+          </div>
 
-<h3>Business Hours</h3>
-<p>Monday - Saturday</p>
-<p>9:00 AM - 7:00 PM (IST)</p>
+          <div class="field-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about your goals" class="textarea-field"></textarea>
+          </div>
 
-<a href="index.html">← Back to Home</a>
-
+          <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
