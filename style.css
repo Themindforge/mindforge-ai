@@ -1339,6 +1339,19 @@ textarea {
     scroll-behavior: auto;
   }
 }
+
+/* ===== Scroll Reveal Animation ===== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
 /* ===== Page Progress Bar ===== */
 
 .page-progress{

@@ -33,6 +33,24 @@ pageProgress.style.width = scrollPercent + "%";
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
+/* ===== Scroll Reveal Animation ===== */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    revealElements.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const revealTop = element.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - 100) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
   /* ===== Mobile Navigation ===== */
   navToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
