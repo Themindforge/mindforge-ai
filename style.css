@@ -1404,3 +1404,27 @@ textarea {
         transform:rotate(360deg);
     }
 }
+
+
+/* ===== Mouse Glow ===== */
+
+#mouseGlow{
+    position:fixed;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    pointer-events:none;
+    background:radial-gradient(circle,
+        rgba(0,212,255,.18) 0%,
+        rgba(123,97,255,.10) 35%,
+        transparent 70%);
+    transform:translate(-50%,-50%);
+    z-index:0;
+    opacity:0;
+    transition:opacity .3s ease;
+    filter:blur(25px);
+}
+
+body:hover #mouseGlow{
+    opacity:1;
+}
