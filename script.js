@@ -1,6 +1,14 @@
 (function () {
   'use strict';
 
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.classList.add("hide");
+    }, 1200);
+});
+
   const header = document.getElementById('header');
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');

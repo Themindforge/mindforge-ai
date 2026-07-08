@@ -1351,3 +1351,56 @@ textarea {
     z-index:99999;
     transition:width .15s linear;
 }
+
+/* ===== Premium Preloader ===== */
+
+#preloader{
+    position:fixed;
+    inset:0;
+    background:#070b14;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999999;
+    transition:opacity .7s ease, visibility .7s ease;
+}
+
+#preloader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-content{
+    text-align:center;
+}
+
+.loader-logo{
+    font-size:42px;
+    font-weight:800;
+    color:#ffffff;
+    letter-spacing:1px;
+    margin-bottom:30px;
+}
+
+.loader-logo span{
+    color:#00d4ff;
+}
+
+.loader-spinner{
+    width:70px;
+    height:70px;
+    border:4px solid rgba(255,255,255,.15);
+    border-top:4px solid #00d4ff;
+    border-radius:50%;
+    animation:loaderSpin 1s linear infinite;
+    margin:auto;
+}
+
+@keyframes loaderSpin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
