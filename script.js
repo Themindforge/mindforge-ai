@@ -67,7 +67,7 @@ revealOnScroll();
   });
 
   /* ===== Scroll Reveal Animations ===== */
-  const revealElements = document.querySelectorAll('.reveal');
+  const revealItems = document.querySelectorAll('.reveal');
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -81,7 +81,7 @@ revealOnScroll();
     { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
 
-  revealElements.forEach((el) => revealObserver.observe(el));
+  revealItems.forEach((el) => revealObserver.observe(el));
 
   /* ===== Animated Counters ===== */
   function animateCounter(element) {
