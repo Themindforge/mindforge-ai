@@ -216,15 +216,48 @@
     });
   });
 
-  contactForm.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('submitBtn');
+const btnText = document.getElementById('btnText');
+const btnLoader = document.getElementById('btnLoader');
+ contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
     const isValid = Object.keys(validators).every((fieldId) => validateField(fieldId));
 
-    if (!isValid) {
-        e.preventDefault();
-        return;
+    if (!isValid) return;
+
+    submitBtn.disabled = true;
+    btnText.style.display = "none";
+    btnLoader.style.display = "inline";
+
+    const formData = new FormData(contactForm);
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById("formSuccess").hidden = false;
+            contactForm.reset();
+
+            setTimeout(() => {
+                document.getElementById("formSuccess").hidden = true;
+            }, 5000);
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+
+    } catch (error) {
+        alert("Network error. Please try again.");
     }
 
+    submitBtn.disabled = false;
+    btnText.style.display = "inline";
+    btnLoader.style.display = "none";
 });
 
   /* ===== Smooth anchor offset for fixed header ===== */
