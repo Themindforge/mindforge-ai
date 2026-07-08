@@ -21,6 +21,13 @@
     } else {
       header.classList.remove('scrolled');
     }
+    
+   const pageProgress = document.getElementById("pageProgress");
+
+const scrollPercent =
+(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+pageProgress.style.width = scrollPercent + "%";
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
