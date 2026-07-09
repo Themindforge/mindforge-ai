@@ -1441,3 +1441,43 @@ textarea {
 body:hover #mouseGlow{
     opacity:1;
 }
+
+/* ===== WhatsApp Floating Button ===== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(37,211,102,.4);
+    z-index: 9999;
+    transition: all .3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(37,211,102,.6);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+@media (max-width:768px){
+    .whatsapp-float{
+        width:55px;
+        height:55px;
+        bottom:20px;
+        right:20px;
+    }
+}
