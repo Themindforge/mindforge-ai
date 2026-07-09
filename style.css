@@ -1467,10 +1467,11 @@ body:hover #mouseGlow{
     box-shadow: 0 10px 25px rgba(37,211,102,.6);
 }
 
-.whatsapp-float svg {
+.whatsapp-float img {
     width: 32px;
     height: 32px;
-    fill: #fff;
+    object-fit: contain;
+    display: block;
 }
 
 @media (max-width:768px){
