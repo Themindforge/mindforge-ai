@@ -1468,17 +1468,25 @@ body:hover #mouseGlow{
 }
 
 .whatsapp-float img {
-    width: 32px;
-    height: 32px;
+    width: 70%;
+    height: 70%;
     object-fit: contain;
     display: block;
 }
 
 @media (max-width:768px){
+
     .whatsapp-float{
-        width:55px;
-        height:55px;
+        width:65px;
+        height:65px;
         bottom:20px;
         right:20px;
     }
+
+    .whatsapp-float img{
+        width:72%;
+        height:72%;
+        object-fit:contain;
+    }
+
 }
