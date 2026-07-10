@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://themindforge.github.io/sitemap.xml
+Sitemap: https://themindforge.github.io/mindforge-ai/sitemap.xml
